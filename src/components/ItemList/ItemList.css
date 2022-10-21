@@ -1,0 +1,34 @@
+.checkbox {
+    appearance: none;
+    background-color: #fff;
+    width: 1.15em;
+    height: 1.15em;
+    border-radius: 0.15em;
+    display: grid;
+    place-content: center;
+}
+
+.checkbox::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #9333EA;
+}
+
+.checkbox:checked::before {
+    transform: scale(1);
+}
+
+.trashButton{
+    overflow: hidden;
+    width: 0;
+    transition: all 0.3s ease;
+}
+
+.task-line:hover .trashButton{
+    overflow: hidden;
+    width: 40px;
+    padding: 13px;
+}
